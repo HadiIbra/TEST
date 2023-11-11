@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('version') {
       steps {
@@ -8,7 +8,7 @@ pipeline {
     }
     stage('hello') {
       steps {
-        sh 'python3 ChangeResolution.py'
+        bat 'python3 ChangeResolution.py'
       }
     }
   }
